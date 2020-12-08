@@ -23,10 +23,10 @@ module.exports = {
       forceFullSync: true
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-        head: false,
+        id: process.env.GOOGLE_ANALYTICS_ID,
+        includeInDevelopment: false,
       },
     },
     {

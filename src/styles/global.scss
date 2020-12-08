@@ -484,4 +484,106 @@ body.light {
     left: 2px
 }
 
+.book{
+background-image:linear-gradient(105deg,
+  rgba(#fff, .9) 0%,
+  rgba(#fff, .9) 50%, 
+  transparent 50%) ,url("../images/me.jpg");
+background-size:100%;
+border-radius: 3px;
+box-shadow:0 1.5rem 4rem rgba(#000, .2);
+background-position: center;
+display: flex;
+justify-content: flex-end;
+@include respond(tab-land){
+    background-image:linear-gradient(105deg,
+  rgba(#fff, .9) 0%,
+  rgba(#fff, .9) 65%, 
+  transparent 65%) ,url("../images/me.jpg");
+    background-size: cover
+}
+@include respond(tab-port){
+	background-image:linear-gradient(to right,
+	rgba(#fff, .9) 0%,
+	rgba(#fff, .9) 100%), 
+  url("../images/me.jpg");
+  padding-right: 3rem;
+}
+&__form{
+  width:40%;
+  padding:3rem;	
+    @include respond(tab-land){
+    width:65%;
+}
+@include respond(tab-port){
+    width:100%;
+    }
+}
+}
+.heading-secondary{
+  color: var(--primary-color);
+  font-size: 2rem;
+}
 
+.form{
+  &__group:not(:last-child){
+    margin-bottom:2rem;
+
+  }
+  &__input{
+    font-size: 1.2rem;
+    font-family:inherit;
+    color:inherit;
+    padding:1rem 2rem;
+    border-radius:2px;
+    background-color:rgba(#fff, .5);
+    border:none;
+    border-bottom: 3px solid transparent;
+    width:90%;
+    display:block;
+    transition: all .4s;
+    @include respond(tab-port){
+      width:100%;
+    }
+  &::-webkit-input-placeholder{
+    color:var(--btn-text-color);
+  } 
+  &:focus{
+    outline:none;
+    box-shadow:0 1rem 2rem rgba(#000, .1);
+    border-bottom: 3px solid var(--card-bg);
+  }
+  &:focus:invalid{
+    border-bottom: 3px solid var(--primary-color);  
+  }
+
+  }
+  &__btn{
+    padding: 1rem 2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    color: inherit;
+  }
+  
+
+  &__label{
+    font-size:1.2rem;
+    font-weight:500;
+    margin-left:2rem;
+    margin-top:.7rem;
+    display:block;
+    transition:all .3s;
+    // color: var(--primary-color);
+
+  }
+  &__input:placeholder-shown + &__label{
+    opacity:0;
+    visibilty:hidden;
+    transform:translateY(-4rem);
+  }
+}
