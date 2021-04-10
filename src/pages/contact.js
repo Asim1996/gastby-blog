@@ -23,12 +23,12 @@ const Contact = () => {
                <input type="hidden" name="form-name" value="contact" />
                </div>
                   <div class="form__group">
-                    <input type="text" class="form__input" placeholder="Full Name" id="name" required />
+                    <input name="name" type="text" class="form__input" placeholder="Full Name" id="name" required />
                     <label for="name" class="form__label">Full Name</label>
                   
                   </div>
                   <div class="form__group">
-                    <input type="email" class="form__input" placeholder="Email" id="email" required />
+                    <input name="email" type="email" class="form__input" placeholder="Email" id="email" required />
                     <label for="email" class="form__label">Email</label>
                   </div>
                   <div class="form__group">

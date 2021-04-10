@@ -3,7 +3,7 @@ import { SocialIcon } from 'react-social-icons';
 const Footer = () => {
     return (
         <footer className="site-footer">
-            <p>&copy; {new Date().getFullYear()} Asim Ansari | Software Engineer at <a href="https://infeedo.com/" className="site-footer-link">inFeedo</a></p>
+            <p>&copy; {new Date().getFullYear()} Asim Ansari | Software Engineer at <a href="https://www.simpplr.com/" className="site-footer-link">Simpplr</a></p>
             <div className="site-social">
             <SocialIcon url="https://www.linkedin.com/in/asim-ansari96/"/>
             <SocialIcon url="https://github.com/Asim1996" bgColor="#666"/>
